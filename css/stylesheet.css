@@ -1,8 +1,9 @@
 * {
-	font-family: 'Overpass Mono', Helvetica, serif;
+	font-family: 'Range Mono', 'Overpass Mono', Helvetica, Serif;
 	font-size: 12px;
 	line-height: 1.5em;
 	color: black;
+	font-weight: 400;
 }
 
 section{
@@ -10,14 +11,22 @@ section{
 	margin: 13% auto 0;
 }
 
-a {
-	text-decoration: none;
-	color: black;
+img {
+	width: 40px;
+	height: 40px;
+	display: block;
 }
 
 h1 {
 	text-transform: uppercase;
 	margin: 16px 0 40px;
+	letter-spacing: .15em;
+	font-weight: 700;
+}
+
+a {
+	text-decoration: none;
+	color: black;
 }
 
 p{
@@ -26,9 +35,4 @@ p{
 
 br::after {
 	margin-bottom: 1em;
-}
-
-img {
-	width: 40px;
-	height: 40px;
 }
