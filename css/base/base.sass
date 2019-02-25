@@ -2,6 +2,13 @@
 	background: $dark
 	color: $light
 
+html, body
+	width: 100%
+	position: relative
+	margin: 0 auto
+	height: auto
+	display: block
+
 hr
 	border: 0
 	width: 100%
@@ -31,10 +38,12 @@ ul
 
 	.list
 
-		p
+		li
 			position: relative
+			list-style-type: none
 			@media only screen and (max-width: 960px)
 				margin-left: 2.25em
+				list-style-type: none
 
 				&:before
 					content: '↳'

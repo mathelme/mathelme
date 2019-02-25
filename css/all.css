@@ -3,6 +3,13 @@
   background: #000;
   color: #fff; }
 
+html, body {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  height: auto;
+  display: block; }
+
 hr {
   border: 0;
   width: 100%;
@@ -27,12 +34,14 @@ ul {
 
 .cred-block {
   margin: 120px auto; }
-  .cred-block .list p {
-    position: relative; }
+  .cred-block .list li {
+    position: relative;
+    list-style-type: none; }
     @media only screen and (max-width: 960px) {
-      .cred-block .list p {
-        margin-left: 2.25em; }
-        .cred-block .list p:before {
+      .cred-block .list li {
+        margin-left: 2.25em;
+        list-style-type: none; }
+        .cred-block .list li:before {
           content: "↳";
           display: inline-block;
           left: 0;
