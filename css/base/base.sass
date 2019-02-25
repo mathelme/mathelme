@@ -18,16 +18,27 @@ img
 	display: inline-block
 	height: auto
 
+ul
+	margin: 0
+	padding: 0
+
+	li
+		list-style-type: none
+
+
 .cred-block
 	margin: 120px auto
 
 	.list
 
 		p
+			position: relative
 			@media only screen and (max-width: 960px)
+				margin-left: 2.25em
 
 				&:before
 					content: '↳'
 					display: inline-block
-					margin-right: 8px
-					margin-left: 8px
+					left: 0
+					margin-left: -1.5em
+					position: absolute

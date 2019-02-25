@@ -19,19 +19,30 @@ img {
   display: inline-block;
   height: auto; }
 
+ul {
+  margin: 0;
+  padding: 0; }
+  ul li {
+    list-style-type: none; }
+
 .cred-block {
   margin: 120px auto; }
-  @media only screen and (max-width: 960px) {
-    .cred-block .list p:before {
-      content: "↳";
-      display: inline-block;
-      margin-right: 8px;
-      margin-left: 8px; } }
+  .cred-block .list p {
+    position: relative; }
+    @media only screen and (max-width: 960px) {
+      .cred-block .list p {
+        margin-left: 2.25em; }
+        .cred-block .list p:before {
+          content: "↳";
+          display: inline-block;
+          left: 0;
+          margin-left: -1.5em;
+          position: absolute; } }
 
 * {
   font-family: "IBM Plex Mono", monospace; }
 
-h1, h2, h3, h4, h5, h6, p, li, ol, i, span, a {
+h1, h2, h3, h4, h5, h6, p, i, span, a {
   font-weight: 400;
   font-size: 0.9em;
   line-height: 1.5em;
