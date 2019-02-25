@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   background: #000;
   color: #fff; }
@@ -20,6 +21,12 @@ img {
 
 .cred-block {
   margin: 120px auto; }
+  @media only screen and (max-width: 960px) {
+    .cred-block .list p:before {
+      content: "↳";
+      display: inline-block;
+      margin-right: 8px;
+      margin-left: 8px; } }
 
 * {
   font-family: "IBM Plex Mono", monospace; }
