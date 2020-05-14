@@ -360,6 +360,9 @@ i a{
 		padding: 0;
 		font-size: 16px;
 	}
+	p{
+		font-size: 18px;
+	}
 	.cta .copy {
 		font-size: 24px;
 		margin: 27px 18px 0 0;
