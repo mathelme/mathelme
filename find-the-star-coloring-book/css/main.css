@@ -386,4 +386,8 @@ i a{
 	.spacer{
 		height: 32vh;
 	}
+	h3{
+		font-size: 20pt;
+	}
+	}
 }
