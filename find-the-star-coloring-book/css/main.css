@@ -34,7 +34,7 @@ header, main, footer {
 }
 
 header{
-	background: #fff url(../img/hero3.png) center no-repeat;
+	background: #fff url(../img/hero.png) center no-repeat;
 	background-size: cover;
 	height: auto;
 	position: relative;
@@ -51,7 +51,7 @@ main {
 	padding: 0 40px;
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, h5, p {
 	display: block;
 	width: 100%;
 	line-height: 1.35em;
@@ -79,6 +79,7 @@ h3{
 	padding: 0 40px;
 	width: calc(100% - 80px);
 	text-align: left;
+	font-weight: 500;
 }
 
 h4{
@@ -90,6 +91,10 @@ h4{
 	width: calc(100% - 480px);
 }
 
+h5{
+	font-weight: 500;
+}
+
 p{
 	font-size: 21pt;
 	margin-bottom: 60px;
@@ -98,7 +103,7 @@ p{
 }
 
 a{
-	font-weight: 500;
+	font-weight: 400;
 	text-decoration: none;
 	color: inherit;
 }
@@ -129,7 +134,7 @@ strong {
 	font-size: 24px;
 	border: 2px solid	#2da89f;
 	transition: 200ms ease-in;
-	width: auto;
+	width: 33%;
 	position: relative;
 	line-height: 1em;
 }
@@ -144,11 +149,13 @@ strong {
 .icon_download {
 	width: 36px;
 	height: 36px;
-	padding: 16px;
+	padding: 24px;
 	margin: 0px;
 	transition: opacity ease 300ms;
 	display: inline-block;
-	float: left;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 .cta .icon_download .st0, .cta .icon_download .st1 {
@@ -171,10 +178,14 @@ strong {
 }
 
 .cta .copy{
-	display: inline-block;
-	float: right;
-	margin: 24px 16px 0 0;
+	display: block;
+	margin: 0 auto;
 	letter-spacing: .086em;
+	font-size: 20px;
+	padding: 16px;
+	width: 100%;
+	text-align: center;
+	position: relative;
 }
 
 .background p{
@@ -187,6 +198,14 @@ strong {
 	padding: 40px;
 	border: 1px solid #000;
 	width: calc(100% - 80px);
+}
+
+.small-img {
+	display: none;
+}
+
+.big-img {
+	display: block;
 }
 
 footer{
@@ -309,14 +328,17 @@ i a{
 		padding: 0;
 		font-size: 18px;
 	}
-	.cta .copy {
-		font-size: 24px;
-		margin: 27px 18px 0 0;
-	}
 	.background img {
 		padding: 0;
 		width: 100%;
 		border: 0;
+	}
+	.small-img {
+		display: block;
+	}
+
+	.big-img {
+		display: none;
 	}
 	p i {
 		width: 100%;
@@ -340,9 +362,7 @@ i a{
 		display: block;
 		width: 100%;
 	}
-	.cta{
-		font-size: 18px;
-	}h2{
+	h2{
 		font-size: 54px;
 		margin: 40px auto;
 		text-align: left;
@@ -363,10 +383,6 @@ i a{
 	p{
 		font-size: 18px;
 	}
-	.cta .copy {
-		font-size: 24px;
-		margin: 27px 18px 0 0;
-	}
 	.background img {
 		padding: 0;
 		width: 100%;
@@ -380,14 +396,44 @@ i a{
 	.icons {
 		width: 100%;
 	}
+	.cta{
+		width: 50%;
+	}
 }
 
 @media only screen and (max-width: 550px) {
 	.spacer{
 		height: 32vh;
 	}
+
 	h3{
 		font-size: 18pt;
 	}
+
+	.box {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: calc(100% - 80px);
+		display: block;
+		margin :0 auto;
+		z-index: 100;
+		padding: 20px 40px;
+		height: auto;
+		background: rgb(255,255,255);
+		background: linear-gradient(0deg, rgba(255,255,255,1) 33%, rgba(255,255,255,0) 100%);
+	}
+	.cta {
+		margin: 0 auto;
+		padding: 8px;
+		width: calc(100% - 16px);
+	}
+
+	.cta .copy {
+		padding: 8px;
+	}
+
+	.icon_download {
+		padding: 12px 12px 12px 16px;
 	}
 }
