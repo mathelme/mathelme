@@ -366,7 +366,7 @@ i a{
 		width: 100%;
 	}
 	h2{
-		font-size: 54px;
+		font-size: 66px;
 		margin: 40px auto;
 		text-align: left;
 	}
@@ -410,6 +410,10 @@ i a{
 	}
 	.spacer{
 		height: 32vh;
+	}
+
+	h2{
+		font-size: 48px;
 	}
 
 	h3{
