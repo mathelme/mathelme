@@ -433,6 +433,17 @@ i a{
 		margin: 0 auto;
 		padding: 8px;
 		width: calc(100% - 16px);
+		background-color: #000;
+		border-color: #000;
+		color: white;
+	}
+
+	.cta:hover {
+		border-color: #2da89f;
+	}
+
+	.cta .icon_download .st0, .cta .icon_download .st1 {
+		stroke: #fff;
 	}
 
 	.cta .copy {
