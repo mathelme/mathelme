@@ -353,7 +353,7 @@ i a{
 
 @media only screen and (max-width: 800px) {
 	.row{
-		padding: 0 20px;
+		padding: 0 40px;
 	}
 	.background p {
 		padding: 0;
@@ -405,6 +405,9 @@ i a{
 }
 
 @media only screen and (max-width: 550px) {
+	.row{
+		padding: 0 20px;
+	}
 	.spacer{
 		height: 32vh;
 	}
