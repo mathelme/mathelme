@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An interactive image processing tool that lets you transform photos with various effects including blur, noise, contrast, and dithering. Features multiple color schemes like Earth tones, Tokyo neon, Ocean coral, Pop music, Nike, Gucci, Google, and Wes Anderson-inspired palettes. Upload images, apply effects in real-time, and download your processed images.">
+    <title>Thermal Image Effect Generator</title>
+    <meta name="author" content="Mat Helme">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar for Controls -->
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <div class="multi-control-section">
+                <h2>Color</h2>
+
+                <div class="control-section">
+                    <h4>Scheme</h4>
+                    <div class="chips-container">
+                        <div class="chip-item active" data-value="none">
+                            None
+                            <div class="color-preview" style="background: black"></div>
+                        </div>
+                        <div class="chip-item" data-value="earth">
+                            Natural Earth Hues
+                            <div class="color-preview"></div>
+                        </div>
+                        <div class="chip-item" data-value="tokyo">
+                            Tokyo Lights
+                            <div class="color-preview"></div>
+                        </div>
+                        <div class="chip-item" data-value="coral">
+                            Ocean Coral Brights
+                            <div class="color-preview"></div>
+                        </div>
+                        <div class="chip-item" data-value="pop">
+                            Pop Music
+                            <div class="color-preview"></div>
+                        </div>
+                        <div class="chip-item" data-value="nike">
+                            Nike
+                            <div class="color-preview" style="background: linear-gradient(to right, #FF69B4, #32CD32)"></div>
+                        </div>
+                        <div class="chip-item" data-value="gucci">
+                            Gucci
+                            <div class="color-preview"></div>
+                        </div>
+                        <div class="chip-item" data-value="google">
+                            Google
+                            <div class="color-preview" style="background: linear-gradient(to right, #4285F4, #EA4335, #FBBC05, #34A853)"></div>
+                        </div>
+                        <div class="chip-item" data-value="wes">
+                            Wes Anderson
+                            <div class="color-preview" style="background: linear-gradient(to right, #FF6B6B, #4ECDC4, #45B7D1)"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="switch-field">
+                        <label>
+                            Reverse Colors
+                            <input type="checkbox" id="reverseColors">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+    <!-- Canvas in the Center -->
+    <div class="canvas-container">
+        <canvas id="canvas"></canvas>
+        <div class="upload-container">
+            <button class="btn upload-btn" id="uploadButton">
+                <i class="material-icons">upload</i>
+                Upload Image
+            </button>
+            <input type="file" id="imageUpload" accept="image/*">
+        </div>
+        <div class="loading-overlay">
+            <i class="material-icons">hourglass_empty</i>
+        </div>
+    </div>
+
+    <!-- Right Sidebar for Additional Effects -->
+    <div class="right-sidebar">
+        <div class="sidebar-content">
+            <h2>Effects</h2>
+            <div class="control-section">
+                <div class="range-field">
+                    <label>Blur</label>
+                    <input type="range" id="blurRange" min="0" max="10" step="0.5" value="0">
+                    <em>0</em>
+                </div>
+
+                <div class="range-field">
+                    <label>Noise</label>
+                    <input type="range" id="noiseRange" min="0" max="100" step="1" value="0">
+                    <em>0</em>
+                </div>
+
+                <div class="range-field">
+                    <label>Contrast</label>
+                    <input type="range" id="contrastRange" min="0" max="100" step="1" value="0">
+                    <em>0</em>
+                </div>
+
+                <div class="range-field">
+                    <label>Dither</label>
+                    <input type="range" id="ditherRange" min="0" max="20" step="1" value="0">
+                    <em>0</em>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="uploadAnotherButton" class="btn hidden">
+                    <i class="material-icons">add_photo_alternate</i>
+                    Upload Another
+                </button>
+                <button id="saveButton" class="btn hidden">
+                    <i class="material-icons">download</i>
+                    Save Image
+                </button>
+                <button id="toggleOriginal" class="btn hidden">
+                    <i class="material-icons">visibility</i>
+                    Show Original
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
